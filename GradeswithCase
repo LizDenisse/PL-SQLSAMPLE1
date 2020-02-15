@@ -1,0 +1,24 @@
+DECLARE
+
+salary number:=20000;
+grade VARCHAR(20):='';
+
+BEGIN
+
+grade:= 
+
+CASE 
+
+WHEN salary > 100000  THEN 'Grade A' 
+WHEN salary <= 50000 AND salary >= 100000 THEN 'Grade B'
+WHEN salary <= 25000 AND salary >= 500000 THEN 'Grade C'
+WHEN salary <= 10000 AND salary >= 250000 THEN 'Grade D'
+ELSE 'Grade E'
+
+END; 
+
+dbms_output.put_line(grade);
+
+
+END;
+/
