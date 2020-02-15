@@ -4,7 +4,7 @@ c_id customer.customer_id%TYPE := 11;
 c_fname customer.first_name%TYPE;
 c_lname customer.last_name%TYPE;
 c_addr customer.country%TYPE;
-c_
+
 BEGIN
 
 SELECT first_name, country INTO c_name, c_addr
