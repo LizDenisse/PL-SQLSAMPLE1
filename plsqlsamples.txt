@@ -1,0 +1,14 @@
+DECLARE
+
+var1 number:=20;
+var2 VARCHAR(45):= 'Joemil' ;
+var3 TIMESTAMP := SYSTIMESTAMP+180;
+BEGIN
+
+dbms_output.put_line(var1);
+dbms_output.put_line(var2);
+dbms_output.put_line(var3); 
+
+
+END;
+/
