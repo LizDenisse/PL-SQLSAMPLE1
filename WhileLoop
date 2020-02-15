@@ -1,0 +1,17 @@
+DECLARE
+
+cntr  number(3):=200;
+
+
+BEGIN
+
+WHILE cntr <=300
+LOOP
+dbms_output.put_line(cntr);
+cntr:= cntr+1;
+
+END LOOP;
+
+
+END;
+/
