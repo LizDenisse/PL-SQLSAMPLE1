@@ -1,0 +1,31 @@
+DECLARE
+
+cntr  number:=300;
+var1 number:=3;
+var2 number;
+
+
+BEGIN
+
+IF var1 =1 THEN
+    WHILE cntr <=300
+    LOOP 
+        dbms_output.put_line(cntr);  
+        cntr := cntr + 1; 
+    END LOOP;
+
+ELSIF var1 =2 
+THEN
+
+FOR cntr IN  400..800
+LOOP 
+        dbms_output.put_line(cntr);  
+END LOOP;
+
+ELSE 
+dbms_output.put_line('Wrong Choice');  
+
+END IF;
+
+END;
+/
