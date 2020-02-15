@@ -1,0 +1,16 @@
+DECLARE
+
+cntr  number(3):=200;
+
+
+BEGIN
+
+FOR cntr in reverse 200..300
+LOOP
+dbms_output.put_line(cntr);
+
+END LOOP;
+
+
+END;
+/
