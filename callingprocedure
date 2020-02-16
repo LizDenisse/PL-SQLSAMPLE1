@@ -1,0 +1,10 @@
+DECLARE 
+
+BEGIN 
+
+add_customer(17, 'MARICELA', 'RIVERA', 'M',' 84 WAYOMING', NULL,'GRAND RAPIDS', 'USA', SYSDATE, 'SOUTHWEST'); 
+
+
+END;
+
+SELECT * FROM customer
