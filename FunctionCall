@@ -1,0 +1,1 @@
+select find_salescount(TO_DATE('01-jan-2015', 'dd-mon-yyyy')) from dual
