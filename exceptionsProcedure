@@ -1,0 +1,39 @@
+CREATE OR REPLACE PROCEDURE GET_CUSTOMER
+(
+c_id           IN NUMBER 
+)
+
+AS
+    c_name customer.first_name%TYPE;
+    c_cntry customer.country%TYPE;
+    c_customer_id_exception EXCEPTION;
+    
+BEGIN
+
+    IF c_id <= 0 THEN 
+    RAISE c_customer_id_exception; 
+    END IF;
+    
+
+        SELECT first_name, country INTO c_name, c_cntry
+        FROM customer 
+        WHERE customer_id = c_id; 
+
+        dbms_output.put_line('Name' || c_name); 
+        dbms_output.put_line('Name' || c_cntry); 
+
+
+EXCEPTION
+        WHEN no_data_found THEN
+        dbms_output.put_line('no such customer!'); 
+        WHEN  too_many_rows THEN 
+        dbms_output.put_line('You got more than 1 row');
+        --WHEN others THEN 
+      --  dbms_output.put_line('Error!');
+        WHEN c_customer_id_exception THEN 
+        dbms_output.put_line('ID must be greater than zero');
+
+END;
+/
+
+execute get_customer(0);
